@@ -29,11 +29,21 @@ namespace bserver.Data
             
 
             System.Drawing.Bitmap bmp = (System.Drawing.Bitmap)System.Drawing.Bitmap.FromFile(fn);
-            //return bl.GetBytesFromBitmap(bmp);
+            var buglist =  bl.GetBuGeRedListFromBitmap(bmp);
+
+            Action<BuGeRed> redifi = _ =>
+            {
+                _.Red = 250;
+            };
+
+            buglist.ForEach(redifi);
+
+            var bmpedited = bl.GetBitmapFromBuGeRedList(buglist, bmp.Width, bmp.Height);
 
             using (var stream = new MemoryStream())
             {
-                bmp.Save(stream, System.Drawing.Imaging.ImageFormat.Png);
+                bmpedited.Save(stream, System.Drawing.Imaging.ImageFormat.Png);
+                
                 return stream.ToArray();
             }
 

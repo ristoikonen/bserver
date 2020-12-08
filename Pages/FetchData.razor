@@ -1,9 +1,16 @@
 ﻿@page "/fetchdata"
 
 @using bserver.Data
+@*@using Microsoft.AspNetCore.SignalR.Client*@
 @inject WeatherForecastService ForecastService
+@inject NavigationManager NavigationManager
 
 <h1>Weather forecast</h1>
+
+<button class="btn btn-primary" @onclick="Connect">
+    Conn
+</button>
+
 
 <p>This component demonstrates fetching data from a service.</p>
 
@@ -43,8 +50,23 @@ else
 @code {
     private WeatherForecast[] forecasts;
 
+    
+
+    
+
     protected override async Task OnInitializedAsync()
     {
         forecasts = await ForecastService.GetForecastAsync(DateTime.Now);
     }
+
+    protected async Task Connect(MouseEventArgs e)
+    {
+        
+        return;
+
+
+
+    }
+
+
 }
