@@ -2,7 +2,12 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
+    <UserSecretsId>698689f4-e08e-428a-91df-f9b849d8c791</UserSecretsId>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="HttpClientSetupService.cs" />
+  </ItemGroup>
 
   <ItemGroup>
     <None Remove="S.png" />
@@ -15,6 +20,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.SignalR.Client" Version="5.0.0" />
+    <PackageReference Include="Microsoft.Azure.SignalR" Version="1.6.1" />
     <PackageReference Include="System.Drawing.Common" Version="5.0.0" />
   </ItemGroup>
 
