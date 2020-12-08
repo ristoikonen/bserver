@@ -7,8 +7,8 @@
 
 <h1>Weather forecast</h1>
 
-<button class="btn btn-primary" @onclick="Connect">
-    Conn
+<button class="btn btn-primary">
+    TEst
 </button>
 
 
@@ -50,23 +50,10 @@ else
 @code {
     private WeatherForecast[] forecasts;
 
-    
-
-    
 
     protected override async Task OnInitializedAsync()
     {
         forecasts = await ForecastService.GetForecastAsync(DateTime.Now);
     }
-
-    protected async Task Connect(MouseEventArgs e)
-    {
-        
-        return;
-
-
-
-    }
-
 
 }
