@@ -33,6 +33,16 @@ namespace bserver.Data
 
             Action<BuGeRed> redifi = _ =>
             {
+                //int blues = 1;
+                //int bluesafter = 1;
+                //blues = Convert.ToInt32(_.Blue);
+                //bluesafter = blues / 2;
+                //Byte by = bluesafter;
+                //_.Blue = blues; 
+                //// (byte)_.Blue >> 4;
+                ////if (Int32.TryParse( blues+2, out bluesafter))
+                
+                
                 _.Red = 250;
             };
 
