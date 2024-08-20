@@ -3,5 +3,5 @@ Image play: From Bitmap to byte array to Bitmap.
 
 ### We can do LINQ ops to List of bytes!
 
-Check method:
-Bitmap GetBitmapFromBuGeRedList(List<BuGeRed> pixelList, int width, int height) 
+Methods can be found here:
+[GetBitmapFromBuGeRedList](https://github.com/ristoikonen/bserver/blob/main/BuGeRedLister.cs)
